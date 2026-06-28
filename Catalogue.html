@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+<title>Sealiverse Catalog</title>
+<link rel="stylesheet"
+      href="Catalogue.ss.css">
+</head>
+
+<body>
+    <!-- Seal Cursor Companion -->
+    <div id="sealCursor">
+        <img
+            id="sealImg"
+            src="Seal-Normal.png"
+            alt="Seal Cursor">
+    </div>
+
+<nav>
+    <h1>🦭 Sealiverse Catalog</h1>
+
+    <a href="index.html">
+        ← Home
+    </a>
+</nav>
+
+<header>
+    <h1>
+        My Favorite Seals
+    </h1>
+
+    <p>
+        Click a seal to learn
+        more about them.
+    </p>
+</header>
+
+<div class="grid">
+
+    <div class="card"
+         onclick="showSeal('harp')">
+
+        <img src="seals/harps.jpg">
+
+        <h2>Harp Seal</h2>
+
+        <p>
+            Arctic Floof
+        </p>
+
+    </div>
+
+    <div class="card"
+         onclick="showSeal('leopard')">
+
+        <img src="seals/Leopard.jpg">
+
+        <h2>Leopard Seal</h2>
+
+        <p>
+            Apex Hunter
+        </p>
+
+    </div>
+
+    <div class="card"
+         onclick="showSeal('baikal')">
+
+        <img src="seals/Baikal.jpg">
+
+        <h2>Baikal Seal</h2>
+
+        <p>
+            Freshwater Seal
+        </p>
+
+    </div>
+
+    <div class="card"
+         onclick="showSeal('ringed')">
+
+        <img src="seals/ringed.jpg">
+
+        <h2>Ringed Seal</h2>
+
+        <p>
+            Arctic Survivor
+        </p>
+
+    </div>
+
+    <div class="card"
+         onclick="showSeal('spotted')">
+
+        <img src="seals/spotted.jpg">
+
+        <h2>Spotted Seal</h2>
+
+        <p>
+            Pacific Swimmer
+        </p>
+
+    </div>
+
+</div>
+
+<div id="viewer">
+
+    <div class="viewer-image">
+    <img id="viewImg">
+
+    <div class="life-stage">
+
+    <button
+        class="stage-btn active"
+        onclick="showStage('adult', this)">
+        🌊 Adult Seal
+    </button>
+
+    <button
+        class="stage-btn"
+        onclick="showStage('pup', this)">
+        Seal Pup
+    </button>
+
+</div>
+
+</div>
+
+    <div class="viewer-content">
+
+        <h1 id="name"></h1>
+
+        <p class="subtitle"
+           id="subtitle">
+        </p>
+
+        <p id="desc"></p>
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <h3>Scientific</h3>
+                <span id="sci"></span>
+            </div>
+
+            <div class="stat">
+                <h3>Habitat</h3>
+                <span id="hab"></span>
+            </div>
+
+            <div class="stat">
+                <h3>Length</h3>
+                <span id="len"></span>
+            </div>
+
+            <div class="stat">
+                <h3>Weight</h3>
+                <span id="weight"></span>
+            </div>
+
+            <div class="stat">
+                <h3>Lifespan</h3>
+                <span id="life"></span>
+            </div>
+
+            <div class="stat">
+                <h3>Diet</h3>
+                <span id="diet"></span>
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <h2>🦭 Fun Facts</h2>
+
+            <ul id="facts">
+            </ul>
+
+        </div>
+
+        <div class="section">
+
+            <h2> Personality</h2>
+
+            <p id="personality">
+            </p>
+
+        </div>
+
+        <div class="section">
+
+            <h2>Personal Notes</h2>
+
+            <p id="notes">
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="sealCursor.js"></script>
+<script src="catalogue.js"></script>
+
+</body>
+</html>

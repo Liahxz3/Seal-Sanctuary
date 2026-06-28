@@ -1,0 +1,384 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#eef7fa;
+    /* Hide normal cursor */
+    cursor:auto;
+}
+
+/* =====================
+   SEAL CURSOR COMPANION
+   ===================== */
+
+#sealCursor{
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:80px;
+    height:80px;
+
+    pointer-events:none;
+    z-index:99999;
+
+    transform:translate(-40px,20px);
+
+    will-change:transform;
+}
+
+#sealCursor img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+}
+nav{
+    background:#1D3557;
+    color:white;
+
+    padding:20px 40px;
+
+    display:flex;
+    justify-content:space-between;
+}
+
+nav a{
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:50px;
+}
+
+.grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,
+    minmax(200px,1fr));
+
+    gap:30px;
+
+    padding:40px;
+}
+
+.card{
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 10px 20px
+    rgba(0,0,0,.1);
+}
+
+.card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2,
+.card p{
+    padding:10px;
+}
+
+#viewer{
+    background:white;
+
+    margin:40px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    display:flex;
+
+    gap:40px;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.1);
+}
+
+#viewer img{
+    width:300px;
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+}
+
+.stats{
+    display:flex;
+    gap:20px;
+
+    margin:20px 0;
+
+    font-weight:bold;
+}
+
+ul{
+    line-height:2;
+}
+
+button{
+    margin-top:20px;
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#FF8C69;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+.life-stage{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.stage-btn{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#e7eef2;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:bold;
+}
+
+.stage-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#d4ebf1;
+}
+
+.stage-btn.active{
+
+    background:#FF8C69;
+
+    color:white;
+}
+
+.profile-panel{
+
+    width:350px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:20px;
+}
+
+#profilePic{
+
+    width:300px;
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:
+        0 20px 40px
+        rgba(0,0,0,.15);
+}
+
+.verified{
+
+    background:
+        linear-gradient(
+            145deg,
+            #4FC3F7,
+            #0288D1
+        );
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    font-weight:bold;
+}
+
+.follow-btn{
+
+    border:none;
+
+    padding:15px 40px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFD7F3,
+            #FF8FD3
+        );
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.follow-btn:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+}
+
+.stats-bar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    box-shadow:
+        0 10px 20px
+        rgba(0,0,0,.08);
+}
+
+.profile-section{
+
+    margin-top:35px;
+}
+
+.profile-section h2{
+
+    color:#1D3557;
+
+    margin-bottom:15px;
+}
+
+.ga.gallery{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.gallery-img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:18px;
+
+    transition:.3s;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.12);
+}
+
+.gallery-img:hover{
+    transform:
+        scale(1.06);
+}
+
+/* Cute active click */
+
+.gallery-img:active{
+
+    transform:
+        scale(.97);
+}
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.gallery-item::after{
+
+    content:"🦭";
+
+    position:absolute;
+
+    right:12px;
+    bottom:10px;
+
+    font-size:1.3rem;
+
+    opacity:0;
+
+    transition:.3s;
+}
+
+.gallery-item:hover::after{
+    opacity:1;
+}
+
+.comment{
+
+    background:
+        linear-gradient(
+            180deg,
+            white,
+            #eef9ff
+        );
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 5px 10px
+        rgba(0,0,0,.06);
+}

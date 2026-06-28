@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Sealebrities</title>
+
+<link rel="stylesheet"
+      href="sealebrities.css">
+</head>
+
+<body>
+
+ <!-- Seal Cursor Companion -->
+    <div id="sealCursor">
+        <img
+            id="sealImg"
+            src="Seal-Normal.png"
+            alt="Seal Cursor">
+    </div>
+
+<nav>
+
+    <h1>
+        ⭐ Sealebrities
+    </h1>
+
+    <a href="index.html">
+        ← Back Home
+    </a>
+
+</nav>
+
+<header>
+
+    <h1>
+        The Most Famous Seals
+    </h1>
+
+    <p>
+        Click on a sealebrity
+        to view their profile.
+    </p>
+
+</header>
+
+
+<!-- PROFILE GRID -->
+
+<section class="grid">
+
+    <div class="card"
+         onclick="showSeal('ponsuke')">
+
+        <img src="Sealebs/Ponsuke.jpg">
+
+        <h2>
+            Ponsuke ✓
+        </h2>
+
+        <p>
+            Ring Legend
+        </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="showSeal('niko')">
+
+        <img src="Sealebs/Niko.jpg">
+
+        <h2>
+            Niko ✓
+        </h2>
+
+        <p>
+            Aquarium Star
+        </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="showSeal('yuki')">
+
+        <img src="Sealebs/Yuki.jpg">
+
+        <h2>
+            Yuki-chan ✓
+        </h2>
+
+        <p>
+            Ice Princess
+        </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="showSeal('reggae')">
+
+        <img src="Sealebs/reggae.jpg">
+
+        <h2>
+            Reggae ✓
+        </h2>
+
+        <p>
+            Gentle Giant
+        </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="showSeal('yochan')">
+
+        <img src="Sealebs/yochan.jpg">
+
+        <h2>
+            Yo-chan ✓
+        </h2>
+
+        <p>
+            Internet Darling
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROFILE VIEWER -->
+
+<section id="viewer">
+<section id="viewer">
+
+    <!-- LEFT PROFILE PANEL -->
+    <div class="profile-panel">
+
+        <img id="profilePic">
+
+        <div class="verified">
+            ✓ Verified Sealebrity
+        </div>
+
+        <button class="follow-btn">
+            Follow
+        </button>
+
+        <div class="stats-bar">
+
+            <div>
+                <h3 id="followers"></h3>
+                <p>Followers</p>
+            </div>
+
+            <div>
+                <h3 id="likes"></h3>
+                <p>Likes</p>
+            </div>
+
+            <div>
+                <h3 id="posts"></h3>
+                <p>Posts</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT PROFILE -->
+    <div class="info">
+
+        <h1 id="profileName"></h1>
+
+        <div class="location">
+            <span id="location"></span>
+        </div>
+
+        <p id="bio"></p>
+
+
+        <!-- ABOUT -->
+        <div class="profile-section">
+
+            <h2>🦭 About</h2>
+
+            <ul>
+
+                <li>
+                    Favorite Food:
+                    <span id="food"></span>
+                </li>
+
+                <li>
+                    Personality:
+                    <span id="personality"></span>
+                </li>
+
+                <li>
+                    Famous For:
+                    <span id="famous"></span>
+                </li>
+
+                <li>
+                    Fun Fact:
+                    <span id="fact"></span>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ACHIEVEMENTS -->
+        <div class="profile-section">
+
+            <h2>🏆 Achievements</h2>
+
+            <ul id="achievements"></ul>
+
+        </div>
+
+
+        <!-- GALLERY -->
+        <div class="profile-section">
+
+            <h2>📸 Gallery</h2>
+
+            <div id="gallery"
+                 class="gallery">
+
+            </div>
+
+        </div>
+
+
+        <!-- COMMENTS -->
+        <div class="profile-section">
+
+            <h2>💬 Fan Comments</h2>
+
+            <div id="comments">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="sealCursor.js"></script>
+<script src="sealebs.js"></script>
+
+
+</body>
+</html>
